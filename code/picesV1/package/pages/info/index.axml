@@ -1,0 +1,60 @@
+<!-- <view>
+ 彩票编号为：{{price}}
+ 彩票价格：{{price}}
+</view> -->
+
+
+
+<view style="height: calc(100vh - 50px)" scroll-y scroll-with-animation>
+    <view class="lottery-img">
+      <image src="/static/images/bane3.jpg"  />
+    </view>
+    <view class="theme-padding ver-center container-title">
+        <text class="font-sm bold ellipsis title color-g3">开心刮刮乐</text>
+        <text class="fr color-g6 font-extra-sm">42人已购买</text>
+    </view>
+    <view class="split" />
+    <view class="course-main desc2">
+        <view class="head themeColor font-extra-sm">
+            彩票信息
+        </view>
+        <view class="t-main">
+            <image class="t-icon" src="/static/images/timg.jpg"/>
+            <view class="t-info">                
+                <view class="font-sm bold">
+                    开心刮刮乐
+                </view>              
+                <view class="font-extra-sm color-g6 ellipsis3">
+                    彩票描述彩票描述彩票描述彩票描述彩票描述彩票描述彩票描述彩票描述
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="split" />
+    <view>
+      <view class="hot-div hot-checked">
+        <image src="/static/images/bane2.jpg" class="Hot-div-img"></image>
+        <view class="Hot-div-shop ">
+          <view class="hot-price-title">开心刮刮乐</view>
+          <view class="shou-word " style="margin-top: 12rpx;">不小心就刮出个一百万呢</view>
+          <view class="order-red" style="margin-top: 8rpx;">
+            ¥
+            <text>10</text>
+            <!-- <image src='/static/images/shanchu.png'></image> -->
+            <view class="order-red-num">
+              购买数量：
+              <text>-</text>
+              <input type="text" placeholder="" auto-focus value="1"/>
+              <text>+</text>
+            </view>
+          </view>
+          <view>
+          </view>
+        </view>
+      </view>
+    </view>
+</view> 
+<view style="width:100%;height:50px;">
+    <!-- <button type="defiand" size="mini">购买</button> -->
+    <button type="primary" style="width:100%;height:100%">购买</button>
+</view>

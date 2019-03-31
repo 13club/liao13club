@@ -1,0 +1,42 @@
+<!--pages/test/test.aml-->
+  <view>
+    <view class="table-view" style="margin-bottom: 400rpx;">
+      <view class="teacher-kes" a:for="{{data}}" a:key="{{index}}" a:for-index="groupIndex">
+        <view class="teacher-ke">
+          <checkbox-group onTap="checkall" data-index="{{groupIndex}}">
+            <checkbox checked='{{item.checkeedAll}}'></checkbox>
+          </checkbox-group>
+          <text class="teacher-ke-name">{{item.name}}</text>
+        </view>
+        <checkbox-group class="hot-div hot-checked" data-groupIndex="{{groupIndex}}" a:for="{{item.data}}" data-kc="{{item}}" a:key="{{index}}" data-index="{{item.index}}" onTap="Checks1" >
+          <checkbox checked="{{item.checked}}"></checkbox>
+
+          <image src="{{item.url}}" class="Hot-div-img"></image>
+          <view class="Hot-div-shop ">
+            <view class="hot-price-title">{{item.classtitle}}</view>
+            <view class="shou-word " style="margin-top: 12rpx;">课程规格：几节课</view>
+            <view class="order-red" style="margin-top: 8rpx;">
+              ¥
+              <text>{{item.price}}</text>
+              <image src='http://bd.eacase.com/budongimg/shanchu.png' data-groupIndex="{{groupIndex}}" data-index="{{index}}" onTap='shanchuTap'></image>
+            </view>
+            <view>
+            </view>
+          </view>
+        </checkbox-group>
+      </view>
+    </view>
+    <view class="shop-check">
+      <checkbox-group onTap="AllTap" data-index="{{index}}">
+        <checkbox checked='{{checkedAll}}'></checkbox>
+      </checkbox-group>
+      <text class="shop-check-text">全选</text>
+      <view class="shop-check-right">
+        <view class="shop-check-he">
+          合计：
+          <text>¥ {{ priceAll}}</text>
+        </view>
+        <view class="shop-check-jie">结算({{count}})</view>
+      </view>
+    </view>
+  </view>

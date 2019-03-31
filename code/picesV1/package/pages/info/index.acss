@@ -1,0 +1,103 @@
+
+.lottery-img{
+  width: 100%;
+}
+
+
+/* 课程简介 start*/
+
+.course-main.desc {
+    padding: 0 30rpx;
+}
+
+.course-main.desc2 {
+    padding: 0 30rpx;
+    padding-bottom: 30rpx;
+}
+
+.course-main .course-info {
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.course-main .head {
+    padding: 30rpx 0;
+}
+
+.course-main .t-main {
+    display: flex;
+}
+
+.course-main .t-main .t-icon {
+    height: 110rpx;
+    width: 110rpx;
+    border-radius: 50%;
+    margin-right: 31rpx;
+    vertical-align: top;
+}
+
+.course-main .t-main .t-info {
+    display: inline-block;
+    width: 548rpx;
+}
+
+
+/* 课程简介 end*/
+
+
+.Hot-div-img {
+    width: 35%;
+    height: 160rpx;
+    margin-right: 20rpx;
+    
+    float:left;
+  }
+
+  .Hot-div-shop {
+    width: 55%;
+    height: 160rpx;
+    padding: 12rpx 0rpx;
+    
+    float:left;
+  }
+
+  .hot-price-title {
+    font-size: 30rpx;
+    line-height: 25rpx;
+    color: #333;
+  }
+
+  .shou-word {
+    font-size: 28rpx;
+    color: #ababab;
+    margin-top: 10rpx;
+  }
+
+  .order-red {
+    font-size: 28rpx;
+    color: #ff6300;
+    display: flex;
+  }
+
+  .Hot-div-shop .order-red image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 62%;
+  }
+
+.Hot-div-shop .order-red .order-red-num{
+ margin-left:20px;
+}
+.order-red-num text{
+  padding: 0 5px;
+  border: 1px solid #eee;
+  margin: 0 5px;
+}
+.order-red-num input{
+  width:30px;
+  height:10px;
+  color: #333;
+  padding:2px 2px;
+  border:1px solid #eee;
+  text-align: center;
+}
