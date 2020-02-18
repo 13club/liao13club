@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "page/index/index",
+
+    "page/apply/index/index",
+    "page/apply/content/index",
+    "page/apply/agreement/index",
+
+    "page/history/index/index",
+    "page/history/content/index",
+    "page/history/contentSend/index",
+    "page/history/paySettle/index"
+
+  ],
+  "window": {
+    "defaultTitle": "小程序",
+    "backgroundColor": "#F5F5F9",
+    "titleBarColor": "#fff"
+  },
+  "tabBar": {
+    "textColor": "#404040",
+    "selectedColor": "#108ee9",
+    "backgroundColor": "#F5F5F9",
+    "items": []
+  },
+  "debug": true
+}

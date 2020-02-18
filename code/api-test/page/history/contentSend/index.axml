@@ -1,0 +1,87 @@
+<view class="page">
+  <form onSubmit="onSubmit" onReset="onReset">
+
+
+    <view class="page-section">
+      <view class="form-row">
+        <view class="form-row-label">联系人</view>
+        <view class="form-row-content">
+          <input class="input" name="userName" focus="{{true}}" onFocus="onFocus" onBlur="onBlur" placeholder="请输入联系人姓名" />
+        </view>
+      </view>
+
+      <view class="form-line" />
+
+      <view class="form-row">
+        <view class="form-row-label">联系方式</view>
+        <view class="form-row-content">
+          <input class="input" name="userTel" onFocus="onFocus" onBlur="onBlur" placeholder="请输入联系人电话" />
+        </view>
+      </view>
+
+      <view class="form-line" />
+
+      <view class="form-row">
+        <view class="form-row-label">故障地点</view>
+        <view class="form-row-content" onTap="getLocal">
+          <input class="input" name="userTel" onFocus="onFocus" onBlur="onBlur" placeholder="请输入联系人电话" />
+        </view>
+      </view>
+
+      <view class="form-line" />
+
+      <view class="form-row">
+        <view class="form-row-label">产品序号</view>
+        <view class="form-row-content">
+          <input class="input" name="userTel" onFocus="onFocus" onBlur="onBlur" placeholder="请输入联系人电话" />
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">故障描述</view>
+      <view class="form-row">
+        <view class="form-row-label">描述</view>
+        <view class="form-row-content">
+          <input class="input" name="userTel" onFocus="onFocus" onBlur="onBlur" placeholder="请输入联系人电话" />
+        </view>
+      </view>
+
+      <view class="form-line" />
+
+      <view class="form-row">
+        <view class="form-row-label">视频描述</view>
+        <view class="form-row-content">
+          <input class="input" name="userTel" onFocus="onFocus" onBlur="onBlur" placeholder="点击上传" />
+        </view>
+      </view>
+
+    </view>
+
+
+    <view class="page-section">
+      <view class="page-section-title">故障描述</view>
+      <view class="page-section-demo">
+        <input type="text" name="userName" placeholder="请输入联系人姓名"/>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-demo">
+        <checkbox-group name="checkbox">
+          <label><checkbox value="checkbox1" />我已阅读并同意</label>
+        </checkbox-group>
+      </view>
+    </view>
+
+
+
+    <view class="page-section">
+      <view class="page-section-btns">
+        <view><button type="ghost" size="mini" formType="reset">Reset</button></view>
+        <view><button type="primary" size="mini" data-id="121" formType="submit">Submit</button></view>
+      </view>
+    </view>
+    
+  </form>
+</view>

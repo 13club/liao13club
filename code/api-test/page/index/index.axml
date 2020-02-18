@@ -1,0 +1,59 @@
+<view>
+  <view class="banner">
+    <view class="logo" style="opacity: {{titleOpacity}}"><image src="/image/component_logo.png" mode="aspectFit" /></view>
+    <view class="title" style="opacity: {{titleOpacity}}">高腾</view>
+    <view class="sub-title"style="opacity: {{titleOpacity}}">高腾售后服务中心</view>
+  </view>
+
+
+  <view class="listView">
+  	<list>
+			<block a:for="{{itemsThumbMultiple}}">
+				<list-item
+					thumb="{{item.thumb}}"
+					arrow="{{item.arrow}}"
+					onClick="onItemClick"
+					index="items-multiple-{{index}}"
+					last="{{index === (itemsThumbMultiple.length - 1)}}"
+					key="items-multiple-{{index}}"
+					multipleLine="{{true}}"
+				>
+					{{item.title}}
+					<view class="am-list-brief">{{item.brief}}</view>
+					<view a:if="{{item.extra}}" slot="extra">
+						{{item.extra}}
+					</view>
+				</list-item>
+			</block>
+		</list>
+  </view>
+
+  <view style="margin-top: 10px;" />
+
+  <view class="listView">
+  	<list>
+			<block a:for="{{itemsThumbMultiple2}}">
+				<list-item
+					thumb="{{item.thumb}}"
+					arrow="{{item.arrow}}"
+					onClick="onItemClick2"
+					index="{{index}}"
+					last="{{index === (itemsThumbMultiple.length - 1)}}"
+					key="items-multiple-{{index}}"
+					multipleLine="{{true}}"
+				>
+					{{item.title}}
+					<view class="am-list-brief">{{item.brief}}</view>
+					<view a:if="{{item.extra}}" slot="extra">
+						{{item.extra}}
+					</view>
+				</list-item>
+			</block>
+		</list>
+  </view>
+
+
+
+
+
+</view>

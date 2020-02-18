@@ -1,0 +1,88 @@
+<view class="page">
+  <form onSubmit="onSubmit" onReset="onReset">
+
+
+    <view class="page-section">
+      <view class="form-row">
+        <view class="form-row-label">联系人</view>
+        <view class="form-row-content">
+          <input class="input" value="{{userName}}" name="userName" focus="{{true}}" onFocus="onFocus" onBlur="onBlur" placeholder="请输入联系人姓名" />
+        </view>
+      </view>
+
+      <view class="form-line" />
+
+      <view class="form-row">
+        <view class="form-row-label">联系方式</view>
+        <view class="form-row-content">
+          <input class="input" value="{{userTel}}" name="userTel" onFocus="onFocus" onBlur="onBlur" placeholder="请输入联系人电话" />
+        </view>
+      </view>
+
+      <view class="form-line" />
+
+      <view class="form-row" style="position:relative;">
+        <view class="form-row-label">故障地点</view>
+        <view class="form-row-content">
+          <input class="input" value="{{applyAddress}}" name="applyAddress" onFocus="onFocus" onBlur="onBlur" placeholder="获取申报故障地点" />
+          <button type="default" size="mini" onTap="getLocal" 
+            style="position:absolute;right:0;top:50%;transform: translateY(-50%);margin:0;">获取</button>
+        </view>
+      </view>
+
+      <view class="form-line" />
+
+      <view class="form-row" style="position:relative;">
+        <view class="form-row-label">产品序号</view>
+        <view class="form-row-content">
+          <input class="input" value="{{deviceSn}}" name="deviceSn" onFocus="onFocus" onBlur="onBlur" placeholder="扫描获取序列号" />
+          <button type="default" size="mini" onTap="saomaDeviseSN" 
+            style="position:absolute;right:0;top:50%;transform: translateY(-50%);margin:0;">扫码</button>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">故障描述</view>
+
+      <view class="form-row">
+        <view class="form-row-label">描述</view>
+        <view class="form-row-content">
+          <input class="input" value="{{desc}}" name="desc" onFocus="onFocus" onBlur="onBlur" placeholder="请输入联系人电话" />
+        </view>
+      </view>
+
+      <view class="form-line" />
+
+      <view class="form-row" style="position:relative;">
+        <view class="form-row-label">视频描述</view>
+        <view class="form-row-content">
+          <input class="input" value="{{applyVideo}}" name="applyVideo" onFocus="onFocus" onBlur="onBlur" placeholder="点击上传" />
+        </view>
+      </view>
+
+    </view>
+
+
+
+    <view class="page-section">
+      <view class="page-section-demo">
+        <checkbox-group name="checkbox">
+          <label><checkbox value="agree" />我已阅读并同意</label>
+          <label><view onTap="getAgreement" style="color:blue">《报修须知》</view></label>
+        </checkbox-group>
+         
+      </view>
+    </view>
+
+
+
+    <view class="page-section">
+      <view class="page-section-btns">
+        <view><button type="ghost" size="mini" formType="reset">Reset</button></view>
+        <view><button type="primary" size="mini" data-id="121" formType="submit">Submit</button></view>
+      </view>
+    </view>
+    
+  </form>
+</view>

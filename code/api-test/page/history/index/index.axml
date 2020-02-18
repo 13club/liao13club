@@ -1,0 +1,30 @@
+<view class="page">
+
+
+  <block a:for="{{[1,2]}}">
+    <view class="page-section" onTap="getItem" data-index="{{index}}">
+      <view class="form-row">
+        <view class="form-row-label">联系人</view>
+        <view class="form-row-content">xxxx</view>
+      </view>
+
+      <view class="form-row">
+        <view class="form-row-label">联系方式</view>
+        <view class="form-row-content">xxx</view>
+      </view>
+
+      <view class="form-row">
+        <view class="form-row-label">故障地点</view>
+        <view class="form-row-content" onTap="getLocal">xxx</view>
+      </view>
+
+      <view class="form-row">
+        <view class="form-row-label">产品序号</view>
+        <view class="form-row-content">xxx</view>
+      </view>
+    </view>
+    <view style="margin-top: 10px;" />
+  </block>
+
+
+</view>

@@ -1,0 +1,15 @@
+<view>
+
+
+  <view class="listView">
+    <grid onGridItemClick="onItemClick3" columnNum="{{3}}" list="{{list1}}" />
+  </view>
+
+<view style="margin-top: 10px;" />
+
+  <view class="listView">
+    <button type="primary" onTap="getGo">确定</button>
+  </view>
+
+
+</view>

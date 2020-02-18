@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "报修",
+  "titleBarColor": "#262833",
+  "usingComponents": {
+    "list":"mini-antui/es/list/index",
+    "list-item":"mini-antui/es/list/list-item/index",
+    "grid": "mini-antui/es/grid/index"
+  }
+}

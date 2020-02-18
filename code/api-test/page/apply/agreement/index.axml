@@ -1,0 +1,41 @@
+<view class="page">
+  
+  <view class="page-section">
+    <view class="page-section-title">协议须知</view>
+    <view class="page-section-demo">
+
+      <view>
+        <label>
+          <text>高腾暂不能为您的维修设备内资料做备份，请您自行备份好个人资料，设备软件或硬件维修过程中造成您的资料丢失，高腾不承担任何责任。</text>
+        </label>
+      </view>
+      <view>
+        <label>
+          <text>对于已进入维修过程中的设备，若您临时要求终止维修，高腾不能保证恢复维修以前的故障状态。</text>
+        </label>
+      </view>
+      <view>
+        <label>
+          <text>上门维修，正在维修过程中要求终止维修服务，可能产生上门费和拆机费等费用，需用户承担。</text>
+        </label>
+      </view>
+      <view>
+        <label>
+          <text>请您在收到高腾发送的寄修地址7天内寄出设备并录入物流单号信息，避免服务单自动关闭。</text>
+        </label>
+      </view>
+
+    </view>
+  </view>
+
+
+  <view class="page-section">
+    <view class="page-section-btns">
+      <view><button type="ghost" size="mini" formType="reset">Reset</button></view>
+      <view><button type="primary" size="mini" data-id="121" formType="submit">Submit</button></view>
+    </view>
+  </view>
+
+
+
+</view>
