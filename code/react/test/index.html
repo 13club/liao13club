@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>React测试</title>
+        <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+        <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+
+        <!-- babel 支持了jsx语法 -->
+        <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+
+        <style>
+            .one{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <!-- 一 原生写法 -->
+        <script>
+            // //第一个参数：标签名；
+            // //第二个参数：属性；
+            // //第三个参数：标签内容
+            // let tag = React.createElement('h1',{title:'这是标题',className:'one'},'这是内容');
+            // //渲染
+            // ReactDOM.render(tag,document.getElementById('app'));
+        </script>
+
+
+        <!-- 二 引入babel解析器写法 -->
+        <script type="text/babel">
+
+            // var tag=<h1 class="one">这是标题</h1>
+            // //绑定元素 第一个参数：组件；第二个参数：渲染的标签
+            // ReactDOM.render(tag,document.getElementById('app'));
+
+        </script>
+
+
+        <!-- 
+            React使用注意事项：
+            1.jsx中必须闭合标签;
+            2.只有一个根元素；
+            3.一般不支持社区方法
+
+            jsx语法
+            注意点：
+            1.在js中书写xml语法 一定要有根标签 class是className；
+            3.jsx外部不加引号（加了会变成字符串），特殊语法
+            3.如果需要在jsx内部书写js 必须加{}，不能使用for 可以使用forEach和map 一般推荐map map可以有返回值
+            4.这是文字注释需要加{}需要换行（要不把 “}” 也会注释掉）
+            5.map遍历的时候需要加唯一的key
+        -->
+
+        <script type="text/babel">
+            // let arr = [1,2,3,4];
+            // let c = arr.map((item,index)=>{
+            //     return item + ': hello'
+            // })
+            // console.log(c)
+
+            // let msg = 'hello React'
+            // let tag = <div>
+            //     {msg} <br/><br/>
+            //     { 
+            //         //如果需要在jsx内部写js,必须用{} 
+            //     }
+            //     {1>2?'hello':'react'}<br/><br/>
+            //     {Math.random()}<br/><br/>
+
+            //     {
+            //         //内部是js环境
+
+            //         arr.map( (item,index)=>{
+            //             return <h1 className="one" key={index}>内容：{item}</h1>
+            //         } )
+            //     }
+
+            //     <h1>标题</h1>
+            //     <p>内容</p>
+            // </div>
+
+            // //渲染
+            // ReactDOM.render(tag,document.getElementById('app'))
+        </script>
+
+
+        <script type="text/babel">
+            // 方法一
+            // let Tag = (props)=> {
+            //     console.log(props)
+            //     return <div>
+            //         <input type="text" />
+            //         <button>发布</button>
+            //         <p>{props.name}</p>
+            //         <p>{props.stu.name}</p>
+            //         <p>{props.hobby}</p>
+            //     </div>
+            // }
+            // let stu = {
+            //     name:'zs',
+            //     pass:123
+            // }
+            // let hobby=[1,2,3,4];
+            // ReactDOM.render(<Tag name="admin" stu={stu} hobby={hobby} /> ,document.getElementById('app'));
+        
+            // 方法二
+            // let Tag = (props)=> {
+            //     console.log(props)
+            //     return <div>
+            //         <p>{props.name}</p>
+            //     </div>
+            // }
+            // let stu = {
+            //     name:'zs',
+            //     pass:123,
+            //     hobby:[1,2,3,4]
+            // }
+            // ReactDOM.render(<Tag {...stu}  /> ,document.getElementById('app'));
+        </script>
+
+
+        <script type="text/babel">
+            // 组件嵌套
+            // let Child = (props)=>{
+            //     return <li>这是子组件</li>
+            // }
+            // let Tag = (props)=>{
+            //     console.log(props)
+            //     return <div>
+            //         <ul>
+            //             <Child/>
+            //         </ul>
+            //     </div>
+            // }
+            // ReactDOM.render(<Tag />,document.getElementById('app'));
+       
+       
+            // 类组件
+            // class Wrap extends React.Component{
+            //     constructor(props){
+            //         super(props)
+            //     }
+
+            //     render(){
+            //         return <div>这是数据：{this.props.name}</div>
+            //     }
+            // }
+            // let stu = {
+            //     name:'admin'
+            // }
+            // ReactDOM.render(<Wrap {...stu}/>,document.getElementById('app'));
+        
+        
+            // 类组件 + 子组件
+            // class Child extends React.Component{
+            //     constructor(props){
+            //         super(props)
+            //     }
+            //     render(){
+            //         return <h1>这是子组件</h1>
+            //     }
+            // }
+            // class Warp extends React.Component{
+            //     constructor(props){
+            //         super(props)
+            //     }
+            //     render(){
+            //         return <div>
+            //             这是数据：{this.props.name}
+            //             <Child />
+            //         </div>
+            //     }
+            // }
+            // let stu = {
+            //     name: 'admin'
+            // }
+            // ReactDOM.render(<Warp {...stu} />,document.getElementById('app'));
+        
+
+            // let info = [
+            //     {
+            //         msg: '昨天天气'
+            //     },
+            //     {
+            //         msg: '今天天气'
+            //     }
+            // ]
+            // class Child extends React.Component{
+            //     constructor(props){
+            //         super(props)
+            //     }
+            //     render(){
+            //         return <h1>这是子组件{this.props.msg}</h1>
+            //     }
+            // }
+            // class Warp extends React.Component{
+            //     constructor(props){
+            //         super(props)
+            //     }
+            //     render(){
+            //         return <div>
+            //             {
+            //                 info.map((item,index)=>{
+            //                     return <Child key={index} {...item} />
+            //                 })
+            //             }
+            //         </div>
+            //     }
+            // }
+            // ReactDOM.render(<Warp />,document.getElementById('app'))
+        </script>
+
+
+        <script type="text/babel">
+            class Div extends React.Component{
+                constructor(){
+                    super();
+
+                    this.state= {
+                        msg:0,
+                        a:[1,2,3,4],
+                        info:[
+                            {
+                                msg:'昨天天气'
+                            },
+                            {
+                                msg:'今天天气'
+                            }
+                        ]
+                    }
+                }
+                change= (e,i)=>{
+                    console.log(e)
+                    console.log(i)
+                    this.setState({
+                        msg: ++this.state.msg
+                    })
+                }
+                render(){
+                    let infoData = this.state.info;
+                    return <div>
+                        <h1>标题：{this.state.msg}-{this.state.a}</h1>
+                        {
+                            infoData.map((item,index)=>{
+                                return <p key={index} onClick={this.change.bind(this,index,1)}>{item.msg}</p>
+                            })
+                        }
+                    </div>
+                }
+            }
+            ReactDOM.render(<Div />,document.getElementById('app'))
+        </script>
+
+
+    </body>
+</html>
